@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 
 
-require(path.join(__dirname, './data/routing/apiRoutes'))(app);
-require(path.join(__dirname, './data/routing/htmlRoutes'))(app);
+require(path.join(__dirname, './routing/apiRoutes'))(app);
+require(path.join(__dirname, './routing/htmlRoutes'))(app);
 
 
 app.listen(PORT, function() {

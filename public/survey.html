@@ -5,15 +5,10 @@
 
   	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
   	<script src="https://use.fontawesome.com/b38c8ed4c7.js"></script>
-
 	<link rel="stylesheet" href="css/reset.css">
-
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-	<link rel="stylesheet" href=href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">>
-
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-          
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -46,12 +41,6 @@
 							<h5>Name (Required)</h5>
 							<i class="material-icons prefix">account_circle</i>
 							<input type="text" class="validate" placeholder="Your Name Here" id="userName">
-						</div>
-
-						<div class="input-field col s6">
-							<h5>Link to Photo Image (Required)</h5>
-							<i class="material-icons prefix">picture_in_picture</i>
-							<input type="text" class="validate" placeholder="Photo Link Here" id="userPhoto">
 						</div>
 
 						<!-- Survey Questions -->
@@ -250,7 +239,6 @@
 		
 			var userInput = {
 				name: $('#userName').val().trim(),
-				photo: $('#userPhoto').val().trim(),
 				scores:[
 					$('#question1').val().trim(),
 					$('#question2').val().trim(),
@@ -269,7 +257,7 @@
       		.done(function(data) {
       		
       			$('#userMatch').html(data.matchName);
-		    	$("#userMatchImage").attr("src", data.matchImage);
+		    	// $("#userMatchImage").attr("src", data.matchImage);
       			$('#modal1').modal('open');
       		});
 		});
